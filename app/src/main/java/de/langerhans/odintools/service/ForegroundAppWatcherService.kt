@@ -6,6 +6,7 @@ import android.database.ContentObserver
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
+import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import dagger.hilt.android.AndroidEntryPoint
 import de.langerhans.odintools.data.AppOverrideDao
@@ -165,8 +166,10 @@ class ForegroundAppWatcherService @Inject constructor() : AccessibilityService()
                 }
             }
             registerReceiver(batteryLevelReceiver, intentFilter)
+            Log.d("de.langerhans.odintools.debug", "registerBatteryLevelReceiver")
         } else if (!newValue && chargeLimitEnabled) {
             unregisterReceiver(batteryLevelReceiver)
+            Log.d("de.langerhans.odintools.debug", "unregisterBatteryLevelReceiver")
         }
         chargeLimitEnabled = newValue
     }

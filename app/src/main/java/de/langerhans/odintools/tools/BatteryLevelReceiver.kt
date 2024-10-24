@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Context.BATTERY_SERVICE
 import android.content.Intent
 import android.os.BatteryManager
+import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ApplicationContext
 import de.langerhans.odintools.data.SharedPrefsRepo
@@ -30,11 +31,18 @@ class BatteryLevelReceiver : BroadcastReceiver() {
         val batteryManager = context.getSystemService(BATTERY_SERVICE) as BatteryManager
         val batteryLevel = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
 
+        Log.d("de.langerhans.odintools.debug", "action: ${intent.action}")
+        Log.d("de.langerhans.odintools.debug", "batteryLevel: $batteryLevel")
+
         if (batteryLevel >= prefs.maxBatteryLevel && !settings.chargingSeparationEnabled()) {
             settings.enableChargingSeparation()
+            Log.d("de.langerhans.odintools.debug", "enableChargingSeparation")
         } else if (batteryLevel <= prefs.minBatteryLevel && settings.chargingSeparationEnabled()) {
             settings.disableChargingSeparation()
+            Log.d("de.langerhans.odintools.debug", "disableChargingSeparation")
         }
+
+        Log.d("de.langerhans.odintools.debug", "chargingSeparationEnabled: ${settings.chargingSeparationEnabled()}")
     }
 
     companion object {
