@@ -52,6 +52,8 @@ class BatteryLevelReceiver : BroadcastReceiver() {
             Intent.ACTION_POWER_DISCONNECTED,
             Intent.ACTION_SCREEN_OFF,
             Intent.ACTION_SCREEN_ON,
+            "android.os.action.DEVICE_IDLE_MODE_CHANGED",
+            "com.odin2.action.ACTION_SCREEN_LOCK"
         )
     }
 }
