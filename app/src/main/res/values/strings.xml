@@ -83,6 +83,8 @@
         Notice that if the power source is insufficient, battery drain will occur.
     </string>
     <string name="debug">Debug</string>
-    <string name="dumpLogToFile">Dump log to file</string>
-    <string name="dumpLogToFileDescription">Dump log output to a text file in the internal memory.</string>
+    <string name="dumpLogToFile">Dump system log to file</string>
+    <string name="dumpLogToFileDescription">Dump system log output to a text file in the internal memory.</string>
+    <string name="dumpOdinToolsLogToFile">Dump OdinTools log to file</string>
+    <string name="dumpOdinToolsLogToFileDescription">Dump OdinTools-specific log output to a text file in the internal memory.</string>
 </resources>

@@ -303,8 +303,17 @@ class MainViewModel @Inject constructor(
         val dateFormat = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
         val timeStamp = dateFormat.format(currentDate)
         val directory = "/storage/emulated/0"
-        val fileName = "$directory/OdinTools_$timeStamp.log"
+        val fileName = "$directory/system_$timeStamp.log"
         executor
             .executeAsRoot("logcat -d -v threadtime > $fileName")
+    }
+    fun dumpOdinToolsLogToFile() {
+        val currentDate = Date()
+        val dateFormat = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
+        val timeStamp = dateFormat.format(currentDate)
+        val directory = "/storage/emulated/0"
+        val fileName = "$directory/OdinTools_$timeStamp.log"
+        executor
+            .executeAsRoot("logcat -s de.langerhans.odintools.debug -d -v threadtime > $fileName")
     }
 }

@@ -266,6 +266,13 @@ fun SettingsScreen(viewModel: MainViewModel = hiltViewModel(), navigateToOverrid
             ) {
                 viewModel.dumpLogToFile()
             }
+            TriggerPreference(
+                icon = R.drawable.ic_file_save,
+                title = R.string.dumpOdinToolsLogToFile,
+                description = R.string.dumpOdinToolsLogToFileDescription,
+            ) {
+                viewModel.dumpOdinToolsLogToFile()
+            }
 
             // Navigation bar padding
             Spacer(Modifier.windowInsetsBottomHeight(WindowInsets.systemBars))
