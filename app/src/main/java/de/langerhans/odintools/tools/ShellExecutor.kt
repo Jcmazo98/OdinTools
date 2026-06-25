@@ -6,7 +6,7 @@ import android.os.Parcel
 import java.nio.charset.Charset
 import javax.inject.Inject
 
-    @SuppressLint("DiscouragedPrivateApi", "PrivateApi")
+@SuppressLint("DiscouragedPrivateApi", "PrivateApi")
 class ShellExecutor @Inject constructor() {
 
     private val binder: IBinder?
