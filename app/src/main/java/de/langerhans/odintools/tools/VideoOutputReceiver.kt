@@ -28,11 +28,11 @@ class VideoOutputReceiver : BroadcastReceiver() {
 
     private fun handleEvent(connected: Boolean?) {
         if (connected == true && !overrideEnabled) {
-            // Save default styles
+            // Guardar estilos por defecto
             savedControllerStyle = ControllerStyle.getStyle(executor)
             savedL2R2Style = L2R2Style.getStyle(executor)
 
-            // Apply style profile
+            // Aplicar perfil de estilo
             ControllerStyle.getById(prefs.videoOutputControllerStyle).takeIf {
                 it != ControllerStyle.Unknown
             }?.enable(executor)
@@ -42,7 +42,7 @@ class VideoOutputReceiver : BroadcastReceiver() {
 
             overrideEnabled = true
         } else if (connected == false && overrideEnabled) {
-            // Reset to defaults
+            // Restablecer valores por defecto
             savedControllerStyle?.enable(executor)
             savedL2R2Style?.enable(executor)
 

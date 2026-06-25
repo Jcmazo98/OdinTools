@@ -58,7 +58,7 @@ import de.langerhans.odintools.ui.theme.Typography
 fun AppOverridesScreen(viewModel: AppOverridesViewModel = hiltViewModel(), navigateBack: () -> Unit) {
     val uiState: AppOverridesUiModel by viewModel.uiState.collectAsState()
     val app = uiState.app ?: return run {
-        // Shouldn't happen
+        // No debería ocurrir
     }
 
     Scaffold(topBar = { OdinTopAppBar(deviceVersion = uiState.deviceVersion) }) { contentPadding ->
@@ -226,7 +226,7 @@ fun Spinner(options: List<Pair<String, String>>, initialSelection: String, onSel
 
     var optionsCount by remember { mutableIntStateOf(options.size) }
     if (optionsCount != options.size) {
-        // Reset if our options have changed
+        // Reiniciar si nuestras opciones han cambiado
         optionsCount = options.size
         selectedIndex = options.indexOfFirst { it.first == initialSelection }.coerceAtLeast(0)
     }

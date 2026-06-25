@@ -157,8 +157,8 @@ fun SettingsScreen(viewModel: MainViewModel = hiltViewModel(), navigateToOverrid
     Scaffold(topBar = { OdinTopAppBar(deviceVersion = uiState.deviceVersion) }) { contentPadding ->
         Column(
             modifier = Modifier
-                .padding(top = contentPadding.calculateTopPadding()) // Top app bar padding
-                .padding(end = 8.dp) // Extra padding cause of GameAssist bar overlay
+                .padding(top = contentPadding.calculateTopPadding()) // Espaciado de la barra superior
+                .padding(end = 8.dp) // Espaciado extra por la superposición de la barra GameAssist
                 .verticalScroll(rememberScrollState()),
         ) {
             SettingsHeader(R.string.appOverrides)
@@ -267,7 +267,7 @@ fun SettingsScreen(viewModel: MainViewModel = hiltViewModel(), navigateToOverrid
                 viewModel.dumpLogToFile()
             }
 
-            // Navigation bar padding
+            // Espaciado de la barra de navegación
             Spacer(Modifier.windowInsetsBottomHeight(WindowInsets.systemBars))
         }
     }

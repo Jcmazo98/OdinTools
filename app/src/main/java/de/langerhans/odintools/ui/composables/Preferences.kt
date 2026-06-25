@@ -336,7 +336,7 @@ fun RemapButtonDialog(initialValue: Int, onCancel: () -> Unit, onReset: () -> Un
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                // Title
+                // Título
                 Text(
                     text = stringResource(id = R.string.remapButton),
                     modifier = Modifier
@@ -344,7 +344,7 @@ fun RemapButtonDialog(initialValue: Int, onCancel: () -> Unit, onReset: () -> Un
                     style = MaterialTheme.typography.titleLarge,
                 )
                 Spacer(modifier = Modifier.padding(8.dp))
-                // Body
+                // Cuerpo
                 Text(
                     text = stringResource(id = R.string.pressAnyButton),
                     style = MaterialTheme.typography.labelLarge,
@@ -354,7 +354,7 @@ fun RemapButtonDialog(initialValue: Int, onCancel: () -> Unit, onReset: () -> Un
                     style = MaterialTheme.typography.bodyLarge,
                 )
                 Spacer(modifier = Modifier.padding(12.dp))
-                // Buttons
+                // Botones
                 Row(
                     modifier = Modifier
                         .fillMaxWidth(),
@@ -523,7 +523,7 @@ fun VideoOutputOverridePreferenceDialog(
                 modifier = Modifier
                     .padding(24.dp),
             ) {
-                // Title
+                // Título
                 Text(
                     text = stringResource(id = R.string.videoOutputOverride),
                     modifier = Modifier
@@ -531,7 +531,7 @@ fun VideoOutputOverridePreferenceDialog(
                     style = MaterialTheme.typography.titleLarge,
                 )
                 Spacer(modifier = Modifier.padding(8.dp))
-                // Content
+                // Contenido
                 SpinnerDialogPreference(
                     label = R.string.controllerStyle,
                     items = controllerStyleList,
@@ -547,7 +547,7 @@ fun VideoOutputOverridePreferenceDialog(
                     l2R2Style = it
                 }
                 Spacer(modifier = Modifier.padding(12.dp))
-                // Buttons
+                // Botones
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()

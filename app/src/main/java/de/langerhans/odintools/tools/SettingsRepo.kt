@@ -1,6 +1,7 @@
 package de.langerhans.odintools.tools
 
 import de.langerhans.odintools.BuildConfig
+import java.util.Locale
 import javax.inject.Inject
 
 class SettingsRepo @Inject constructor(
@@ -10,7 +11,7 @@ class SettingsRepo @Inject constructor(
     fun applyRequiredSettings() {
         enableA11yService()
         grantAllAppsPermission()
-        // Don't add to whitelist on debug builds, otherwise even Android Studio can't kill the app
+        // No añadir a la lista blanca en builds de depuración, de lo contrario ni Android Studio puede matar la app
         if (!BuildConfig.DEBUG) {
             addOdinToolsToWhitelist()
         }
@@ -42,7 +43,7 @@ class SettingsRepo @Inject constructor(
     }
 
     fun setSfSaturation(value: Float) {
-        executor.executeAsRoot("service call SurfaceFlinger 1022 f ${String.format("%.1f", value)}")
+        executor.executeAsRoot("service call SurfaceFlinger 1022 f ${String.format(Locale.US, "%.1f", value)}")
     }
 
     fun enableChargingSeparation() {

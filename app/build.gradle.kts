@@ -59,7 +59,7 @@ room {
 }
 
 kotlin {
-    jvmToolchain(11)
+    jvmToolchain(21)
 }
 
 ktlint {

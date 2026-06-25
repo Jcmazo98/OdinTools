@@ -87,17 +87,17 @@ class ForegroundAppWatcherService @Inject constructor() : AccessibilityService()
     }
 
     private fun shouldIgnore(event: AccessibilityEvent): Boolean {
-        if (overridesEnabled.not()) return true // User disabled overrides globally
-        if (::overrides.isInitialized.not()) return true // Got an event before the DB was returning data
-        if (ignoredPackages.contains(event.packageName)) return true // Ignore some system packages
-        if (event.packageName == currentForegroundPackage) return true // No action on duplicate events
-        if (currentIme.contains(event.packageName)) return true // Ignore keyboards popping up
+        if (overridesEnabled.not()) return true // El usuario desactivó las anulaciones globalmente
+        if (::overrides.isInitialized.not()) return true // Se recibió un evento antes de que la BD devolviera datos
+        if (ignoredPackages.contains(event.packageName)) return true // Ignorar algunos paquetes del sistema
+        if (event.packageName == currentForegroundPackage) return true // No actuar en eventos duplicados
+        if (currentIme.contains(event.packageName)) return true // Ignorar teclados emergentes
 
-        return false // All good, process event
+        return false // Todo bien, procesar evento
     }
 
     private fun applyOverride(override: AppOverrideEntity) {
-        // This check makes sure that we don't override the "defaults" when switching between apps with overrides
+        // Esta comprobación evita sobrescribir los valores por defecto al cambiar entre apps con anulaciones
         if (!hasSetOverride) {
             savedControllerStyle = ControllerStyle.getStyle(executor)
             savedL2R2Style = L2R2Style.getStyle(executor)
@@ -105,19 +105,19 @@ class ForegroundAppWatcherService @Inject constructor() : AccessibilityService()
             savedFanMode = FanMode.getMode(executor)
         }
 
-        // Avoid conflicts with Video Output Override
+        // Evitar conflictos con la anulación de salida de vídeo
         if (!videoOutputOverrideEnabled || !videoOutputReceiver.overrideEnabled) {
             ControllerStyle.getById(override.controllerStyle).takeIf {
                 it != Unknown
             }?.enable(executor) ?: run {
-                // Reset to default if we switch between override and NoChange app
+                // Restablecer valores por defecto al cambiar entre app con anulación y app sin cambios
                 savedControllerStyle?.enable(executor)
             }
 
             L2R2Style.getById(override.l2R2Style).takeIf {
                 it != L2R2Style.Unknown
             }?.enable(executor) ?: run {
-                // Reset to default if we switch between override and NoChange app
+                // Restablecer valores por defecto al cambiar entre app con anulación y app sin cambios
                 savedL2R2Style?.enable(executor)
             }
         }
@@ -125,14 +125,14 @@ class ForegroundAppWatcherService @Inject constructor() : AccessibilityService()
         PerfMode.getById(override.perfMode).takeIf {
             it != PerfMode.Unknown
         }?.enable(executor) ?: run {
-            // Reset to default if we switch between override and NoChange app
+            // Restablecer valores por defecto al cambiar entre app con anulación y app sin cambios
             savedPerfMode?.enable(executor)
         }
 
         FanMode.getById(override.fanMode).takeIf {
             it != FanMode.Unknown
         }?.enable(executor) ?: run {
-            // Reset to default if we switch between override and NoChange app
+            // Restablecer valores por defecto al cambiar entre app con anulación y app sin cambios
             savedFanMode?.enable(executor)
         }
 
@@ -186,7 +186,7 @@ class ForegroundAppWatcherService @Inject constructor() : AccessibilityService()
     }
 
     override fun onInterrupt() {
-        // Nothing here
+        // Nada aquí
     }
 
     override fun onServiceConnected() {
