@@ -38,7 +38,7 @@ class AppOverrideMapper @Inject constructor(
         val appInfo = runCatching {
             context.packageManager.getApplicationInfo(app.packageName, PackageManager.GET_META_DATA)
         }.onFailure { return null }.getOrNull() ?: return null
-        // TODO do DB cleanup on uninstalled packages?
+        // TODO: ¿limpiar BD al desinstalar paquetes?
 
         val controllerStyle = ControllerStyle.getById(app.controllerStyle)
         val l2R2Style = L2R2Style.getById(app.l2R2Style)
@@ -58,7 +58,7 @@ class AppOverrideMapper @Inject constructor(
     }
 
     fun mapEmptyOverride(packageName: String): AppUiModel {
-        // If this crashes then something is fishy...
+        // Si esto falla, algo huele mal...
         val appInfo = context.packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
 
         return AppUiModel(

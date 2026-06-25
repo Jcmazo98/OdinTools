@@ -73,7 +73,7 @@ class MainViewModel @Inject constructor(
     }
 
     fun updateSinglePressHomePreference(newValue: Boolean) {
-        // Invert here as prevent == double press
+        // Invertir aquí porque prevenir == doble pulsación
         settings.preventPressHome = !newValue
 
         _uiState.update { current ->

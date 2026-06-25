@@ -6,7 +6,7 @@ import android.os.Parcel
 import java.nio.charset.Charset
 import javax.inject.Inject
 
-@SuppressLint("DiscouragedPrivateApi", "PrivateApi") // :kekw:
+    @SuppressLint("DiscouragedPrivateApi", "PrivateApi")
 class ShellExecutor @Inject constructor() {
 
     private val binder: IBinder?
@@ -24,7 +24,7 @@ class ShellExecutor @Inject constructor() {
     }
 
     fun executeAsRoot(cmd: String): Result<String?> {
-        if (binder == null) return Result.failure(IllegalStateException("PServer not available!"))
+        if (binder == null) return Result.failure(IllegalStateException("¡PServer no disponible!"))
 
         val data = Parcel.obtain()
         val reply = Parcel.obtain()

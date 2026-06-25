@@ -2,87 +2,85 @@
     <string name="appName">OdinTools</string>
     <string name="xbox">Xbox</string>
     <string name="odin">Odin</string>
-    <string name="disconnect">Disconnect</string>
-    <string name="controllerStyle">Controller style</string>
-    <string name="unknown">Unknown</string>
-    <string name="l2r2mode">L2/R2 mode</string>
-    <string name="analog">Analog</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="controllerStyle">Estilo del mando</string>
+    <string name="unknown">Desconocido</string>
+    <string name="l2r2mode">Modo L2/R2</string>
+    <string name="analog">Analógico</string>
     <string name="digital">Digital</string>
-    <string name="both">Both</string>
-    <string name="perfMode">Performance Mode</string>
-    <string name="standard">Standard</string>
-    <string name="performance">Performance</string>
-    <string name="highPerformance">High Performance</string>
-    <string name="fanMode">Fan Mode</string>
-    <string name="fanOff">Off</string>
-    <string name="quiet">Quiet</string>
-    <string name="smart">Smart</string>
+    <string name="both">Ambos</string>
+    <string name="perfMode">Modo de rendimiento</string>
+    <string name="standard">Estándar</string>
+    <string name="performance">Rendimiento</string>
+    <string name="highPerformance">Alto rendimiento</string>
+    <string name="fanMode">Modo del ventilador</string>
+    <string name="fanOff">Apagado</string>
+    <string name="quiet">Silencioso</string>
+    <string name="smart">Inteligente</string>
     <string name="sport">Sport</string>
-    <string name="topBarVersions">Device version:\nApp version:</string>
+    <string name="topBarVersions">Versión del dispositivo:\nVersión de la app:</string>
 
-    <string name="quickSettings">Quick Settings</string>
-    <string name="controllerStyleDesc">Select which modes to cycle through in the Controller Style quick settings tile.</string>
-    <string name="l2r2modeDesc">Select which modes to cycle through in the L2/R2 Mode quick settings tile.</string>
+    <string name="quickSettings">Ajustes rápidos</string>
+    <string name="controllerStyleDesc">Elige qué estilos de mando (Xbox/Odin/Desconectar) estarán disponibles en el tile de ajustes rápidos para alternar entre ellos rápidamente.</string>
+    <string name="l2r2modeDesc">Elige qué modos de gatillos (Analógico/Digital/Ambos) estarán disponibles en el tile de ajustes rápidos para alternar entre ellos.</string>
 
-    <string name="buttons">Buttons</string>
-    <string name="singlePressHome">Single-press home button</string>
-    <string name="singlePressHomeDescription">When enabled allows using the home button with a single press instead of a double press.</string>
+    <string name="buttons">Botones</string>
+    <string name="singlePressHome">Botón home con una sola pulsación</string>
+    <string name="singlePressHomeDescription">Al activarlo, pulsar el botón home una sola vez te lleva al inicio. Por defecto el sistema obliga a pulsarlo dos veces.</string>
 
-    <string name="warning">Warning</string>
-    <string name="incompatibleDevice">This app was made for the Ayn Odin 2. Running it on an incompatible device may cause damage. The author of this app takes no responsibility for any damage caused!</string>
-    <string name="pServerNotAvailable">The app can\'t access your device settings. This might be caused by a change of functionality in a recent firmware update. If possible this will be fixed in an update. For now, the app can\'t be used. Sorry!</string>
-    <string name="accept">Accept</string>
-    <string name="close">Close app</string>
-    <string name="closeButSad">Close app 😢</string>
-    <string name="cancel">Cancel</string>
-    <string name="save">Save</string>
-    <string name="delete">Delete</string>
+    <string name="warning">Advertencia</string>
+    <string name="incompatibleDevice">Esta aplicación fue creada para el Ayn Odin 2. Ejecutarla en un dispositivo incompatible puede causar daños. El autor de la app no se hace responsable de ningún daño ocasionado.</string>
+    <string name="pServerNotAvailable">La app no puede acceder a los ajustes del dispositivo. Esto puede deberse a un cambio en el firmware reciente. Si es posible, se corregirá en una actualización. Por ahora, la app no se puede usar. Lo sentimos.</string>
+    <string name="accept">Aceptar</string>
+    <string name="close">Cerrar app</string>
+    <string name="closeButSad">Cerrar app 😢</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
 
-    <string name="saturation">Display saturation</string>
-    <string name="display">Display</string>
-    <string name="saturationDescription">Change the saturation of the display. Will be re-applied on reboot. Default value is 1.0.</string>
+    <string name="saturation">Saturación de pantalla</string>
+    <string name="display">Pantalla</string>
+    <string name="saturationDescription">Ajusta la intensidad de los colores de la pantalla. 1.0 es el valor por defecto, menos de 1.0 reduce la saturación y más de 1.0 la aumenta. Se reaplica al reiniciar la consola.</string>
 
-    <string name="videoOutputOverride">External override</string>
-    <string name="videoOutputOverrideDescription">Set up override when connected to an external display. Switch off to disable.</string>
+    <string name="videoOutputOverride">Ajustes para pantalla externa</string>
+    <string name="videoOutputOverrideDescription">Al conectar la consola a un monitor o TV por HDMI/DP, cambia automáticamente el estilo del mando y los gatillos a los valores configurados aquí. Al desconectar, vuelve a los ajustes anteriores. Desactívalo si no quieres que cambie nada.</string>
 
-    <string name="a11yDescription">Used by OdinTools to detect running apps for dynamic switching of button settings.</string>
+    <string name="a11yDescription">Usado por OdinTools para detectar qué app está en primer plano y cambiar los ajustes de botones automáticamente.</string>
 
-    <string name="appOverrides">App overrides</string>
-    <string name="appOverridesDescription">Set up overrides per app. Switch off to globally disable app overrides.</string>
-    <string name="addOverride">Add app override</string>
-    <string name="deleteOverride">Delete override</string>
-    <string name="deleteConfirm">Do you really want to delete this item?</string>
-    <string name="noChange">No change</string>
-    <string name="noOverrideCandidates">You already added overrides for all your apps</string>
-    <string name="fanModeRequired">Fan mode is required when setting a Performance mode</string>
-    <string name="overrideDelay">Override delay</string>
-    <string name="overrideDelayDescription">Delay applying overrides by 0.5s. This can help if apps crash when applying an
-        override.
-    </string>
-    <string name="searchApp">Search</string>
-    <string name="noMatches">No matches.</string>
+    <string name="appOverrides">Ajustes por aplicación</string>
+    <string name="appOverridesDescription">Permite que cada app o juego tenga su propia configuración de mando, gatillos, rendimiento y ventilador. Al abrir una app con perfil asignado, los ajustes se aplican solos; al cerrarla, se restauran los valores por defecto. Desactívalo para deshabilitar todos los perfiles.</string>
+    <string name="addOverride">Añadir perfil de app</string>
+    <string name="deleteOverride">Eliminar perfil</string>
+    <string name="deleteConfirm">¿Seguro que quieres eliminar este perfil?</string>
+    <string name="noChange">Sin cambios</string>
+    <string name="noOverrideCandidates">Ya has creado perfiles para todas tus aplicaciones</string>
+    <string name="fanModeRequired">Al elegir un modo de rendimiento es obligatorio asignar un modo de ventilador</string>
+    <string name="overrideDelay">Retardo al aplicar perfil</string>
+    <string name="overrideDelayDescription">Espera 0,5 segundos antes de aplicar el cambio de perfil. Puede evitar que algunas apps se cierren inesperadamente al cambiar los ajustes.</string>
+    <string name="searchApp">Buscar</string>
+    <string name="noMatches">Sin resultados.</string>
 
-    <string name="haptics">Haptics</string>
-    <string name="vibrationStrength">Vibration strength</string>
-    <string name="vibrationStrengthDescription">Adjust the maximum strength of vibrations &amp; haptics. Switch off to disable vibrations.</string>
+    <string name="haptics">Hápticos</string>
+    <string name="vibrationStrength">Intensidad de vibración</string>
+    <string name="vibrationStrengthDescription">Controla la fuerza máxima de la vibración y los hápticos de la consola. Permite valores más bajos que el ajuste mínimo del sistema. Desactívala para eliminar toda vibración.</string>
 
-    <string name="remapButton">Remap button</string>
-    <string name="remapButtonDescription">Remap button to another key code</string>
-    <string name="m1Button">M1 button</string>
-    <string name="m2Button">M2 button</string>
-    <string name="pressAnyButton">Press any button</string>
-    <string name="setDefault">Set Default</string>
+    <string name="remapButton">Reasignar botón</string>
+    <string name="remapButtonDescription">Cambia la función de este botón por la de cualquier otra tecla</string>
+    <string name="m1Button">Botón M1</string>
+    <string name="m2Button">Botón M2</string>
+    <string name="pressAnyButton">Pulsa cualquier botón para asignarlo</string>
+    <string name="setDefault">Restablecer</string>
 
-    <string name="battery">Battery</string>
-    <string name="chargeLimit">Charge limit</string>
-    <string name="chargeLimitDescription">When enabled activates charging separation at the specified battery levels.</string>
-    <string name="chargeLimitPreferenceDialogOffAt">Off at %1$d%&#37;</string>
-    <string name="chargeLimitPreferenceDialogOnAt">On at %1$d%&#37;</string>
+    <string name="battery">Batería</string>
+    <string name="chargeLimit">Límite de carga</string>
+    <string name="chargeLimitDescription">Al activarlo, la consola deja de cargar la batería al llegar al porcentaje máximo configurado y no vuelve a cargar hasta que baje del mínimo. Así evitas el desgaste de tener la batería siempre al 100%.</string>
+    <string name="chargeLimitPreferenceDialogOffAt">Desactivar al %1$d%%</string>
+    <string name="chargeLimitPreferenceDialogOnAt">Activar al %1$d%%</string>
     <string name="chargeLimitPreferenceDialogDescription">
-        Charging separation means the power goes straight to the device, bypassing the battery.
-        Notice that if the power source is insufficient, battery drain will occur.
+        Con la separación de carga activada, la energía va directamente al dispositivo sin pasar por la batería, evitando su desgaste.
+        Si el cargador no da suficiente potencia, la batería puede descargarse aunque esté enchufada.
     </string>
-    <string name="debug">Debug</string>
-    <string name="dumpLogToFile">Dump log to file</string>
-    <string name="dumpLogToFileDescription">Dump log output to a text file in the internal memory.</string>
+    <string name="debug">Depuración</string>
+    <string name="dumpLogToFile">Volcar registro a archivo</string>
+    <string name="dumpLogToFileDescription">Guarda el registro de depuración del sistema en un archivo de texto en la memoria interna. Útil para diagnosticar problemas.</string>
 </resources>

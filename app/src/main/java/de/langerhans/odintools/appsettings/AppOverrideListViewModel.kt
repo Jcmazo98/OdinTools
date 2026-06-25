@@ -56,8 +56,8 @@ class AppOverrideListViewModel @Inject constructor(
     }
 
     /**
-     * System settings:
-     * performance_mode: standard 0, performance 1, high performance 2
-     * fan_mode: disabled 0, quiet 1, (balance 2), (performance 3), smart 4, sport 5, custom 6
+     * Ajustes del sistema:
+     * performance_mode: estándar 0, rendimiento 1, alto rendimiento 2
+     * fan_mode: apagado 0, silencioso 1, (balance 2), (rendimiento 3), inteligente 4, sport 5, personalizado 6
      */
 }

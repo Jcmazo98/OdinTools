@@ -36,7 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 
 /**
- * Taken and adapted from https://proandroiddev.com/improving-the-compose-dropdownmenu-88469b1ef34
+ * Tomado y adaptado de https://proandroiddev.com/improving-the-compose-dropdownmenu-88469b1ef34
  */
 @Composable
 fun <T> LargeDropdownMenu(
@@ -70,7 +70,7 @@ fun <T> LargeDropdownMenu(
             readOnly = true,
         )
 
-        // Transparent clickable surface on top of OutlinedTextField
+        // Superficie transparente clickable encima del OutlinedTextField
         Surface(
             modifier = Modifier
                 .fillMaxSize()
